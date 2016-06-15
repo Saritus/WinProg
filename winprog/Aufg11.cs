@@ -12,17 +12,20 @@ public class Aufg11 : Form
     private TextBox textBox1;
     private Button button1;
 
-    [DllImport("DLL Praktikum.dll")]
+    [DllImport("../Dll/DLL Praktikum.dll")]
     public static extern void teste0();
-    [DllImport("DLL Praktikum.dll")]
-    public static extern void teste1(int i);
+    [DllImport("../Dll/DLL Praktikum.dll")]
+    public static extern void teste1(Int32 i);
 
-    
-    [DllImport("DLL Praktikum.dll")]
+
+    [DllImport("../Dll/DLL Praktikum.dll")]
     public static extern IntPtr teste2();
 
-    [DllImport("MFCLibrary1.dll")]
-    public static extern int tolleZahl();
+    [DllImport("../Dll/MFCLibrary1.dll")]
+    public static extern int addiere(int i1, int i2);
+
+    [DllImport("../Dll/MFCLibrary1.dll")]
+    public static extern int textbox();
     
 
     public Aufg11()
@@ -126,9 +129,10 @@ public class Aufg11 : Form
 
     private void button2_Click(object sender, EventArgs e)
     {
+        Int32 i = 11;
         try
         {
-            teste1(Decimal.ToInt32(this.numericUpDown1.Value));
+            teste1(i);
         }
         catch (Exception exception)
         {
@@ -145,6 +149,8 @@ public class Aufg11 : Form
 
     private void button4_Click(object sender, EventArgs e)
     {
-        textBox1.Text = tolleZahl().ToString();
+        //textBox1.Text = tolleZahl().ToString();
+        textbox();
+        MessageBox.Show(addiere(3, 5).ToString());
     }
 }
