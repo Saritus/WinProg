@@ -27,22 +27,22 @@ namespace WpfApplication1
 
         private void name_changed(object sender, TextChangedEventArgs e)
         {
-            name_output.Content = "Name: " + name_input.Text;
+            name_output.Content = "Name:\t\t " + name_input.Text;
         }
 
         private void mtnr_changed(object sender, TextChangedEventArgs e)
         {
-            mtnr_output.Content = "Matrikelnummer: " + mtnr_input.Text;
+            mtnr_output.Content = "Matrikelnummer:\t " + mtnr_input.Text;
         }
 
         private void fach_changed(object sender, EventArgs e)
         {
-            fach_output.Content = "Fach: " + fach_input.Text;
+            fach_output.Content = "Fach:\t\t " + fach_input.Text;
         }
 
         private void engagement_changed(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            engagement_output.Content = "Engagement: " + (int) engagement_input.Value;
+            engagement_output.Content = "Engagement:\t " + (int)engagement_input.Value;
         }
 
         private void Note_Checked(object sender, RoutedEventArgs e)
@@ -51,7 +51,7 @@ namespace WpfApplication1
             var button = sender as RadioButton;
 
             // ... Display button content as title.
-            note_output.Content = "Note: " + button.Content.ToString();
+            note_output.Content = "Note:\t\t " + button.Content.ToString();
 
         }
 
@@ -61,7 +61,7 @@ namespace WpfApplication1
             var button = sender as RadioButton;
 
             // ... Display button content as title.
-            belegnote_output.Content = "Belegnote: " + button.Content.ToString();
+            belegnote_output.Content = "Belegnote:\t " + button.Content.ToString();
 
         }
     }
