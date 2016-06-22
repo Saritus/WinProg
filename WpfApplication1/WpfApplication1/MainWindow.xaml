@@ -1,0 +1,52 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="450" Width="750">
+    <Grid>
+        <GroupBox Header="Eingabe" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="400" Width="355">
+            <Grid>
+                <Label Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Label Content="Matrikelnummer:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+                <Label Content="Fach:" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
+                <Label Content="Note:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
+                <Label Content="Belegnote:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top"/>
+                <Label Content="Engagement:" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top"/>
+                <TextBox Name="name_input" HorizontalAlignment="Left" Height="26" Margin="115,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" TextChanged="name_changed"/>
+                <TextBox Name="mtnr_input" HorizontalAlignment="Left" Height="26" Margin="115,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="218" TextChanged="mtnr_changed"/>
+                <ComboBox Name="fach_input" HorizontalAlignment="Left" Height="26" Margin="115,90,0,0" VerticalAlignment="Top" Width="218" DropDownClosed="fach_changed">
+                    <ComboBoxItem Name="cbi1">Windowsprogrammierung</ComboBoxItem>
+                    <ComboBoxItem Name="cbi2">Mathe</ComboBoxItem>
+                </ComboBox>
+                <GroupBox HorizontalAlignment="Left" Height="26" Margin="115,130,0,0" VerticalAlignment="Top" Width="218">
+                    <Grid>
+                        <RadioButton GroupName="note_input" Content="1" Height="14" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" Checked="Note_Checked"/>
+                        <RadioButton GroupName="note_input" Content="2" Height="14" HorizontalAlignment="Left" Margin="40,6,0,0" VerticalAlignment="Top" Checked="Note_Checked"/>
+                        <RadioButton GroupName="note_input" Content="3" Height="14" HorizontalAlignment="Left" Margin="80,6,0,0" VerticalAlignment="Top" Checked="Note_Checked"/>
+                        <RadioButton GroupName="note_input" Content="4" Height="14" HorizontalAlignment="Left" Margin="120,6,0,0" VerticalAlignment="Top" Checked="Note_Checked"/>
+                        <RadioButton GroupName="note_input" Content="5" Height="14" HorizontalAlignment="Left" Margin="160,6,0,0" VerticalAlignment="Top" Checked="Note_Checked"/>
+                    </Grid>
+                </GroupBox>
+                <GroupBox HorizontalAlignment="Left" Height="26" Margin="115,170,0,0" VerticalAlignment="Top" Width="218">
+                    <Grid>
+                        <RadioButton GroupName="belegnote_input" Content="1" Height="14" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" Checked="Belegnote_Checked"/>
+                        <RadioButton GroupName="belegnote_input" Content="2" Height="14" HorizontalAlignment="Left" Margin="40,6,0,0" VerticalAlignment="Top" Checked="Belegnote_Checked"/>
+                        <RadioButton GroupName="belegnote_input" Content="3" Height="14" HorizontalAlignment="Left" Margin="80,6,0,0" VerticalAlignment="Top" Checked="Belegnote_Checked"/>
+                        <RadioButton GroupName="belegnote_input" Content="4" Height="14" HorizontalAlignment="Left" Margin="120,6,0,0" VerticalAlignment="Top" Checked="Belegnote_Checked"/>
+                        <RadioButton GroupName="belegnote_input" Content="5" Height="14" HorizontalAlignment="Left" Margin="160,6,0,0" VerticalAlignment="Top" Checked="Belegnote_Checked"/>
+                    </Grid>
+                </GroupBox>
+                <ScrollBar Name="engagement_input" HorizontalAlignment="Left" Height="26" Margin="115,210,0,0" VerticalAlignment="Top" Width="218" Orientation="Horizontal" Minimum="0" Maximum="100" ValueChanged="engagement_changed"/>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Ausgabe" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Height="400" Width="355">
+            <Grid>
+                <Label Name="name_output" Content="Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Label Name="mtnr_output" Content="Matrikelnummer:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top"/>
+                <Label Name="fach_output" Content="Fach:" HorizontalAlignment="Left" Margin="10,90,0,0" VerticalAlignment="Top"/>
+                <Label Name="note_output" Content="Note:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top"/>
+                <Label Name="belegnote_output" Content="Belegnote:" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top"/>
+                <Label Name="engagement_output" Content="Engagement:" HorizontalAlignment="Left" Margin="10,210,0,0" VerticalAlignment="Top"/>
+            </Grid>
+        </GroupBox>    
+    </Grid>
+</Window>
