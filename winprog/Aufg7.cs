@@ -28,6 +28,7 @@ public class Aufg7: Form
     private Button btnopen;
     private Button btnsave;
     private Brush brush;
+    private Bitmap buffer;
 
     public Aufg7()
     {
