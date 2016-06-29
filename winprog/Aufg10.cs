@@ -49,72 +49,72 @@ public class Aufg10 : Form
     }
     private void InitializeComponent()
     {
-            this.button1 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.RichTextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(138, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.Location = new System.Drawing.Point(12, 12);
-            this.listBox1.Multiline = true;
-            this.listBox1.Name = "listBox1";
-            //this.listBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.listBox1.Size = new System.Drawing.Size(120, 433);
-            this.listBox1.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(138, 41);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Pause";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(138, 70);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Stop";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(138, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 89);
-            this.label1.TabIndex = 5;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Aufg10
-            // 
-            this.ClientSize = new System.Drawing.Size(255, 486);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button1);
-            this.Name = "Aufg10";
-            this.Closing += new System.ComponentModel.CancelEventHandler(this.MyClosing);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+        this.button1 = new System.Windows.Forms.Button();
+        this.listBox1 = new System.Windows.Forms.RichTextBox();
+        this.button2 = new System.Windows.Forms.Button();
+        this.button3 = new System.Windows.Forms.Button();
+        this.label1 = new System.Windows.Forms.Label();
+        this.SuspendLayout();
+        // 
+        // button1
+        // 
+        this.button1.Location = new System.Drawing.Point(138, 12);
+        this.button1.Name = "button1";
+        this.button1.Size = new System.Drawing.Size(105, 23);
+        this.button1.TabIndex = 1;
+        this.button1.Text = "Start";
+        this.button1.UseVisualStyleBackColor = true;
+        this.button1.Click += new System.EventHandler(this.button1_Click);
+        // 
+        // listBox1
+        // 
+        this.listBox1.Location = new System.Drawing.Point(12, 12);
+        this.listBox1.Multiline = true;
+        this.listBox1.Name = "listBox1";
+        //this.listBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+        this.listBox1.Size = new System.Drawing.Size(120, 433);
+        this.listBox1.TabIndex = 2;
+        // 
+        // button2
+        // 
+        this.button2.Location = new System.Drawing.Point(138, 41);
+        this.button2.Name = "button2";
+        this.button2.Size = new System.Drawing.Size(105, 23);
+        this.button2.TabIndex = 3;
+        this.button2.Text = "Pause";
+        this.button2.UseVisualStyleBackColor = true;
+        this.button2.Click += new System.EventHandler(this.button2_Click);
+        // 
+        // button3
+        // 
+        this.button3.Location = new System.Drawing.Point(138, 70);
+        this.button3.Name = "button3";
+        this.button3.Size = new System.Drawing.Size(105, 23);
+        this.button3.TabIndex = 4;
+        this.button3.Text = "Stop";
+        this.button3.UseVisualStyleBackColor = true;
+        this.button3.Click += new System.EventHandler(this.button3_Click);
+        // 
+        // label1
+        // 
+        this.label1.Location = new System.Drawing.Point(138, 96);
+        this.label1.Name = "label1";
+        this.label1.Size = new System.Drawing.Size(105, 89);
+        this.label1.TabIndex = 5;
+        this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+        // 
+        // Aufg10
+        // 
+        this.ClientSize = new System.Drawing.Size(255, 486);
+        this.Controls.Add(this.label1);
+        this.Controls.Add(this.button3);
+        this.Controls.Add(this.button2);
+        this.Controls.Add(this.listBox1);
+        this.Controls.Add(this.button1);
+        this.Name = "Aufg10";
+        this.Closing += new System.ComponentModel.CancelEventHandler(this.MyClosing);
+        this.ResumeLayout(false);
+        this.PerformLayout();
 
     }
 
@@ -160,7 +160,7 @@ public class Aufg10 : Form
                 prime = true;
             }
         }
-        
+
         this.Invoke((MethodInvoker)delegate
         {
             StringBuilder sb = new StringBuilder("");
@@ -178,7 +178,7 @@ public class Aufg10 : Form
 
     private void button2_Click(object sender, EventArgs e)
     {
-        if (thread!=null)
+        if (thread != null)
         {
             thread.Suspend();
         }
@@ -186,7 +186,7 @@ public class Aufg10 : Form
 
     private void button3_Click(object sender, EventArgs e)
     {
-        if ((thread != null) && (true)) 
+        if ((thread != null) && (true))
             thread.Abort();
         run = false;
     }
@@ -231,7 +231,7 @@ public class MyProgressBar : ProgressBar
             ProgressBarRenderer.DrawHorizontalBar(e.Graphics, e.ClipRectangle);
         rec.Height = rec.Height - 2;
         e.Graphics.FillRectangle(Brushes.Red, 1, 1, rec.Width, rec.Height);
-        e.Graphics.DrawString(Value + "", new Font(FontFamily.GenericSerif, 12.0F, FontStyle.Regular), Brushes.White, new Point(1,1));
+        e.Graphics.DrawString(Value + "", new Font(FontFamily.GenericSerif, 12.0F, FontStyle.Regular), Brushes.White, new Point(1, 1));
     }
 }
 

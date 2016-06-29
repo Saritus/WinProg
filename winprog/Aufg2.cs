@@ -12,7 +12,7 @@ public class Aufg2 : Form
     public Aufg2()
     {
         Text = "Aufgabe 2";
-        Size = new Size(500 , 500);
+        Size = new Size(500, 500);
         CenterToScreen();
         //MessageBox.Show("Testausgabe MessageBox");
     }
@@ -36,7 +36,7 @@ public class Aufg2 : Form
             grfx.DrawString("die Maus war hier", Font, Brushes.Black, mea.X, mea.Y);
             grfx.Dispose();
         }
-}
+    }
 
     protected override void OnMouseMove(MouseEventArgs mea)
     {
@@ -48,7 +48,7 @@ public class Aufg2 : Form
             line = true;
         }
         grfx.Dispose();
-        System.Windows.Forms.Cursor.Position = new Point(SystemInformation.VirtualScreen.Width / 2, SystemInformation.VirtualScreen.Height/ 2);
+        System.Windows.Forms.Cursor.Position = new Point(SystemInformation.VirtualScreen.Width / 2, SystemInformation.VirtualScreen.Height / 2);
     }
 
     protected override void OnMove(System.EventArgs e)

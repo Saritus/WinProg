@@ -85,7 +85,7 @@ public class Aufg8 : Form
             new Rectangle(0, (9 + (myStepNr + 3) % 6) * 108, 101, 108), GraphicsUnit.Pixel);
 
         // Ultralisk läuft zur Mauspos
-        if (differenz(click, pos) > (t/2) + 1)
+        if (differenz(click, pos) > (t / 2) + 1)
         {
             double xschritt;
             double yschritt;
@@ -98,15 +98,15 @@ public class Aufg8 : Form
             }*/
             if ((int)xDiff < 0)
             {
-                xschritt = -t/Math.Sqrt((yDiff*yDiff)/(xDiff*xDiff) + 1);
-                yschritt = ((yDiff/xDiff)*xschritt);
+                xschritt = -t / Math.Sqrt((yDiff * yDiff) / (xDiff * xDiff) + 1);
+                yschritt = ((yDiff / xDiff) * xschritt);
             }
             else if ((int)xDiff > 0)
             {
-                xschritt = t/Math.Sqrt((yDiff*yDiff)/(xDiff*xDiff) + 1);
-                yschritt = (yDiff/xDiff)*xschritt;
+                xschritt = t / Math.Sqrt((yDiff * yDiff) / (xDiff * xDiff) + 1);
+                yschritt = (yDiff / xDiff) * xschritt;
             }
-            else if (((int) xDiff == 0) && ((int) yDiff > 0))
+            else if (((int)xDiff == 0) && ((int)yDiff > 0))
             {
                 xschritt = 0;
                 yschritt = t;
@@ -116,23 +116,23 @@ public class Aufg8 : Form
                 xschritt = 0;
                 yschritt = -t;
             }
-            pos.X = (int) xschritt + pos.X;
-            pos.Y = (int) yschritt + pos.Y;
-            winkel = -Math.Atan2(yDiff, xDiff)*180.0/Math.PI;
+            pos.X = (int)xschritt + pos.X;
+            pos.Y = (int)yschritt + pos.Y;
+            winkel = -Math.Atan2(yDiff, xDiff) * 180.0 / Math.PI;
             if (winkel < -90)
                 winkel = -90 + (-90 - winkel);
-            d = Math.Abs((int) ((90 - winkel)/20)*101);
+            d = Math.Abs((int)((90 - winkel) / 20) * 101);
             if (direction == 'l')
                 d = 909 - d;
             b.DrawImage(ultraliskWalk, pos.X - 40, pos.Y - 44,
-                new Rectangle(d, (myStepNr%10)*108, 101, 108), GraphicsUnit.Pixel);
+                new Rectangle(d, (myStepNr % 10) * 108, 101, 108), GraphicsUnit.Pixel);
         }
         else
         {
             b.DrawImage(ultraliskWalk, pos.X - 40, pos.Y - 44,
                 new Rectangle(d, 0, 101, 108), GraphicsUnit.Pixel);
         }
-        
+
         myStepNr++;
         /*b.DrawString("Winkel: " + winkel + ", d: " + d, new Font(FontFamily.GenericSerif, 12.0F, FontStyle.Regular), Brushes.White, new Point(1, 1));
         b.DrawString("X: "+ pos.X + " , Y: " + pos.Y, new Font(FontFamily.GenericSerif, 12.0F, FontStyle.Regular), Brushes.White, new Point(1, 19));
